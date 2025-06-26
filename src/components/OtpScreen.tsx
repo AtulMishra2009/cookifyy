@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import Header from './Header';
+import { useNavigation } from '@react-navigation/native';
 
 const OtpScreen = ({ navigation }) => {
   const [otp, setOtp] = useState('');
@@ -14,7 +15,7 @@ const OtpScreen = ({ navigation }) => {
       setError('');
       // Simulate OTP verification
       Alert.alert('OTP Verified', 'You have successfully logged in.');
-      navigation.navigate('Home'); // Navigate to the next screen after verification
+      navigation.navigate('HomeScreen'); // Navigate to the next screen after verification
     }
   };
 

@@ -1,5 +1,5 @@
 // import { Header } from '@react-navigation/stack';
-import Header from '../components/Header'
+import Header from './Header'
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import TextField from './CommonTextField';
@@ -24,7 +24,7 @@ const HomeScreen = () => {
       };
     
   return (
-    <View style={styles.container}>
+    <View style={styles.container}> 
       <Header 
         title="Login" 
         onBackPress={() => navigation.goBack()} 
@@ -73,3 +73,23 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
+
+// UI question - TODO list  
+// 1. Input element with an add button
+// 2. If user types something and clicks on add, it gets added to a todo list which is rendered below the input only
+// 3. Each todo can be marked as completed (Checkbox ) and there should be a strike through if it’s completed. It can be deleted also ( X / delete button )
+// 4. There is an edit button, which edits the todos inline ( save changes on enter/ through a submit button )
+
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+
+// export default function LoginScreen() {
+//   return (
+//     <View>
+      
+//     </View>
+//   )
+// }
+// const Todoapp =() 
+
+// const styles = StyleSheet.create({})

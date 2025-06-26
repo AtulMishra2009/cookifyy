@@ -19,7 +19,7 @@ const SplashScreen = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../images/Freshveg.jpg')} // Your logo image here
+        source={require('../images/spalshscreennew.png')} // Your logo image here
         style={styles.logo}
       />
       <Text style={styles.title}>Welcome to Cookify</Text>

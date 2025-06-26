@@ -2,12 +2,16 @@
 import React from 'react';
 // import { NavigationContainer } from '@react-navigation/native';
 // import { createStackNavigator } from '@react-navigation/stack';
-import SplashScreen from './android/app/src/components/splashscreen';
-import LoginScreen from './android/app/src/components/LoginScreen';
+import SplashScreen from './src/components/splashscreen';
+import LoginScreen from './src/components/LoginScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import OtpScreen from './android/app/src/components/OtpScreen';
+// import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import OtpScreen from './src/components/OtpScreen';
+import HomeScreen from './src/components/HomeScreen';
+import CookBookingScreen from './src/components/CookBookingScreen';
+import CookDetailScreen from './src/components/CookDetailScreen';
+import ThankYouScreen from './src/components/ThankYouScreen';
 // import SplashScreen from './SplashScreen';
 // import HomeScreen from './HomeScreen'; 
 // Your main/home screen component
@@ -32,7 +36,23 @@ const App = () => {
     component={OtpScreen}
     options={{ headerShown: false }}
   />
+  <Stack.Screen name="HomeScreen" 
+         component={HomeScreen} 
+         options={{ title: '' }}/>
+         <Stack.Screen
+    name="homeScreen"
+    component={HomeScreen}
+    options={{ headerShown: false }}
+  />
+   <Stack.Screen name="CookBookingScreen" component={CookBookingScreen}
+    options={{ headerShown: false }}
+   />
+   <Stack.Screen name="CookDetailScreen" component={CookDetailScreen} />
+
+   <Stack.Screen name="ThankYouScreen" component={ThankYouScreen} />
+
       </Stack.Navigator>
+      
     </NavigationContainer>
     // <GestureHandlerRootView/>
   );
